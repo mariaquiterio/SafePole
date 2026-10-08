@@ -1,0 +1,241 @@
+
+/* style.css */
+
+/* Variáveis de Cores e Estilo Globais */
+:root {
+    --primary-color: #1e3a8a;
+    --secondary-color: #3b82f6;
+    --text-color: #1f2937;
+    --bg-color: #f3f4f6;
+    --card-color: #ffffff;
+    --keyword-bg: #e0f2fe;
+    --keyword-text: #0369a1;
+}
+
+/* Reset e Configurações Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth; /* Efeito de rolagem suave ao clicar no menu */
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding-top: 60px; /* Evita que o menu fixo cubra o topo da página */
+}
+
+/* Barra de Navegação Fixa */
+.navbar {
+    background-color: var(--card-color);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 15px 20px;
+}
+
+.navbar .logo {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--secondary-color);
+}
+
+/* Cabeçalho principal */
+.main-header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--card-color);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.main-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.main-header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Estrutura de Layout */
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Blocos de Conteúdo (Seções) */
+.card-section {
+    background-color: var(--card-color);
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    scroll-margin-top: 80px; /* Margem extra para a rolagem não parar colada no menu */
+}
+
+.card-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--bg-color);
+    padding-bottom: 8px;
+}
+
+.card-section p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* Grid de Funcionamento */
+.funcionamento-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.step-card {
+    background-color: var(--bg-color);
+    padding: 20px;
+    border-radius: 6px;
+    border-top: 4px solid var(--secondary-color);
+}
+
+.step-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+/* Palavras-chave da IA */
+.keywords-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 10px;
+}
+
+.keyword {
+    background-color: var(--keyword-bg);
+    color: var(--keyword-text);
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* Formulário de Contato */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group label {
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    border-color: var(--secondary-color);
+}
+
+.btn-submit {
+    background-color: var(--primary-color);
+    color: var(--card-color);
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    align-self: flex-start;
+}
+
+.btn-submit:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Rodapé */
+.main-footer {
+    background-color: var(--text-color);
+    color: var(--card-color);
+    text-align: center;
+    padding: 25px 20px;
+    margin-top: 60px;
+    font-size: 0.9rem;
+}
+
+/* Ajustes para Telas Pequenas (Celulares) */
+@media (max-width: 600px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .nav-links {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    body {
+        padding-top: 100px;
+    }
+    .btn-submit {
+        width: 100%;
+    }
+}

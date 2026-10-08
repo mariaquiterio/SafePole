@@ -1,0 +1,108 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto SafePole</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Barra de Menu Fixa no Topo -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">SafePole</a>
+            <ul class="nav-links">
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#funcionamento">Funcionamento</a></li>
+                <li><a href="#objetivos">Objetivos</a></li>
+                <li><a href="#publico">Público</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="main-header">
+        <h1>Projeto SafePole</h1>
+        <p>Protótipo de Totem Inteligente para Segurança Pública</p>
+    </header>
+
+    <main class="container">
+        <!-- O que é -->
+        <section id="sobre" class="card-section">
+            <h2>O que é?</h2>
+            <p>O <strong>SafePole</strong> é um totem/poste inteligente voltado para a segurança pública que combina câmeras, microfones, sensores, iluminação automática e inteligência artificial para identificar situações de risco e enviar alertas para uma central de monitoramento.</p>
+            <p>O projeto opera junto a uma validação humana (central de monitoramento), onde um operador real observa os avisos do poste (áudio e imagens) para confirmar se é uma emergência real antes de acionar a polícia ou a guarda municipal, evitando alarmes falsos e trotes.</p>
+        </section>
+
+        <!-- Como funciona -->
+        <section id="funcionamento" class="card-section">
+            <h2>Como o poste funciona?</h2>
+            <div class="funcionamento-grid">
+                <article class="step-card">
+                    <h3>1. Captura</h3>
+                    <p>O poste capta dados continuamente através de suas câmeras, microfones e sensores integrados.</p>
+                </article>
+                <article class="step-card">
+                    <h3>2. Análise por IA</h3>
+                    <p>A inteligência artificial analisa os sons do ambiente, treinada para reconhecer palavras-chave como:</p>
+                    <div class="keywords-group">
+                        <span class="keyword">Socorro</span>
+                        <span class="keyword">Ajuda</span>
+                        <span class="keyword">Pare</span>
+                        <span class="keyword">Perigo</span>
+                        <span class="keyword">Emergência</span>
+                        <span class="keyword">Cuidado</span>
+                        <span class="keyword">Polícia</span>
+                    </div>
+                </article>
+                <article class="step-card">
+                    <h3>3. Verificação Humana</h3>
+                    <p>Um segurança na central de monitoramento analisa o alerta emitido e confirma visualmente e por áudio se a ocorrência é real.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Objetivos -->
+        <section id="objetivos" class="card-section">
+            <h2>Qual o objetivo?</h2>
+            <p>Aumentar a segurança em locais públicos e auxiliar na detecção rápida de possíveis ocorrências.</p>
+            <p>Reduzir falhas e falsos alertas (trotes) através do uso de tecnologias mais precisas, testes prévios, posicionamento estratégico e a confirmação por um operador humano antes do acionamento dos serviços de emergência (corrigindo limitações observadas em modelos de totens anteriores, como os de Londrina).</p>
+        </section>
+
+        <!-- Público Alvo -->
+        <section id="publico" class="card-section">
+            <h2>Público que afeta</h2>
+            <p>A população em geral, com foco especial em grupos de maior risco como <strong>mulheres, crianças e adolescentes</strong>. Beneficia diretamente também os órgãos de segurança e os serviços de emergência ao otimizar os acionamentos.</p>
+        </section>
+
+        <!-- Formulário de Contato Simulado -->
+        <section id="contato" class="card-section">
+            <h2>Contato</h2>
+            <p>Tem alguma dúvida ou sugestão sobre o protótipo SafePole? Envie uma mensagem para a nossa equipe.</p>
+            <form class="contact-form" onsubmit="event.preventDefault(); alert('Mensagem enviada com sucesso (Simulação)!');">
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" placeholder="seu.email@exemplo.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" placeholder="Digite sua mensagem aqui..." required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Enviar Mensagem</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p><strong>Desenvolvido por:</strong> Rafaelli Savitti, Lavínia Vitória, Maria Antonia e Isadora Caroline</p>
+    </footer>
+
+</body>
+</html>
+
